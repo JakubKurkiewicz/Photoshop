@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Photoshop</title>
+</head>
+<body>
+    <canvas id="canvas" width="960px" height="540px"></canvas>
+    <div id="container">
+        <div id="first">
+            <div class="range">
+                <h3>Contrast</h3>
+                <input type="range" min="-100" max="100" id="contrastSlider">
+            </div>
+            <div class="range">
+                <h3>Brightness</h3>
+                <input type="range" min="-50" max="50" id="brightnessSlider">
+            </div>
+            <div class="range">
+                <h3>Brush Size</h3>
+                <input type="range" min="1" max="50" id="brushSize">
+            </div>
+        </div>
+        <button id="clear" onclick="clear()"><h3>CLEAR</h3></button>
+        <div id="second">
+            <h3 id="text">Choose brush color:</h3>
+            <div id="colors">
+                <div class="color" style="background-color: red;" id="red" onclick="getColor(this.id)"></div>
+                <div class="color" style="background-color: green;" id="green" onclick="getColor(this.id)"></div>
+                <div class="color" style="background-color: blue;" id="blue" onclick="getColor(this.id)"></div>
+                <div class="color" style="background-color: black;" id="black" onclick="getColor(this.id)"></div>
+            </div>
+            <button id="btn">Negative</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
