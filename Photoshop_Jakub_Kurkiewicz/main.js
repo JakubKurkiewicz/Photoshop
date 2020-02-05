@@ -9,9 +9,16 @@ let contrast = document.querySelector('#contrastSlider')
 let brightness = document.querySelector('#brightnessSlider')
 let negative = document.querySelector('#btn')
 
+let btclear = document.querySelector('#clear')
+
+
+btclear.addEventListener("click", clear);
+ 
 image.addEventListener('load', function(){
     ctx.drawImage(image, x ,y)
 })
+
+
 image.src = 'image.jpg'
 
 
